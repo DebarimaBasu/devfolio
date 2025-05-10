@@ -1,0 +1,33 @@
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0f172a; /* dark background */
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: -150px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: rise 20s infinite ease-in;
+    left: calc(100% * var(--i) / 20);
+  }
+  
+  .bubble:nth-child(odd) {
+    width: 20px;
+    height: 20px;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-1000px) scale(0.5);
+    }
+  }
+  
